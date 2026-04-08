@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 125, 192, 187;
+  --background-end-rgb: 255, 255, 255;
+  --font-mono: 'Space Mono', 'Courier New', monospace;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+  overflow: hidden;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+@layer utilities {
+  .glass {
+    @apply bg-white/70 backdrop-blur-md border border-white/20;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Toon-shaded vibe utility for UI */
+.messenger-border {
+  border: 3px solid #000;
+  box-shadow: 4px 4px 0px #000;
+}
